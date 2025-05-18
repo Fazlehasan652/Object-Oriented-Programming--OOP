@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind BTN Generator</title>
+    <script src="//cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <h1 class="text-2xl m-5">Sample Button Generator</h1>
+    <p id="button-container" class="">
+      <!-- <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mx-4 rounded ">Text</button> -->
+    </p>
+    <script src="/twbg/btng.js"></script>
+    <script>
+      const container = document.querySelector("#button-container");
+      const greenBtn = TailwindButtonGenerator.createButton(
+        "green",
+        "Click Me 1",
+        "4",
+      );
+      const redBtn = TailwindButtonGenerator.createButton(
+        "red",
+        "Click Me 2",
+        "4",
+      );
+      const pinkBtn = TailwindButtonGenerator.createButton(
+        "pink",
+        "Click Me 3",
+        "4",
+      );
+      const yellowBtn = TailwindButtonGenerator.createButton(
+        "yellow",
+        "Click Me 4",
+        "4",
+      );
+      const orangeBtn = TailwindButtonGenerator.createButton(
+        "orange",
+        "Click Me 5",
+        "4",
+      );
+      const blueBtn = TailwindButtonGenerator.createButton(
+        "blue",
+        "Click Me 6",
+        "4",
+      );
+
+      container.innerHTML += greenBtn
+      container.innerHTML += redBtn
+      container.innerHTML += blueBtn
+      container.innerHTML += pinkBtn
+      container.innerHTML += yellowBtn
+      container.innerHTML += orangeBtn
+    </script>
+  </body>
+</html>
